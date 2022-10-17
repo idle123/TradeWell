@@ -49,14 +49,14 @@ def processTradeDataOfUser():
                     finalres = res
                 else:
                     finalres = finalres.append(res,ignore_index=True)    
-        finalres.to_csv("tempFinalRes.csv")
-        orderDf.to_csv("orderDf.csv")
+        finalres.to_csv("./../data/result/tempFinalRes.csv")
+        orderDf.to_csv("./../data/result/orderDf.csv")
         findTotalRevengeTradingLoss(finalres)
 
 #Read JSON file that contains order info
 #def readOrderInfo_json():
 def readOrderJSON():
-    path = os.getcwd() + "\\..\\data\\Orders\\"
+    path = os.getcwd() + "/../data/Orders/"
     json_files = glob.glob(os.path.join(path,"*.json"))
     j =1 
     orderPlacementData = pd.DataFrame()
@@ -73,8 +73,10 @@ def readOrderJSON():
     return orderPlacementData
 
 def readTradeJSON():
-    path = os.getcwd() + "\\..\\data\\tradeJSON\\"
+    path = os.getcwd() + "/../data/tradeJSON/"
+    print(path)
     json_files = glob.glob(os.path.join(path,"*.json"))
+    print(json_files)
     j =1 
     tradeData = pd.DataFrame()
     for f in json_files:

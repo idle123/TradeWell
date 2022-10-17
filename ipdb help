@@ -1,0 +1,17 @@
+import ipdb
+ipdb.set_trace()
+n  execute next statement
+enter repeat last debugging command
+p printing the value
+q quitting
+c continuing till next breakpoint
+c turning off pdb prompt but still continuing with the debugging
+l where you are currently
+s stepping into subroutines
+r continuing but to the end of the current subroutine
+you can execute normal commands as well
+follow your command with ! to tell ipdb that it is a python command not a pdb command
+https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/
+
+
+
